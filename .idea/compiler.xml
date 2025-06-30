@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="aem-spa-sccp.ui.content" />
+        <module name="aem-spa-sccp.ui.apps.structure" />
+        <module name="aem-spa-sccp.all" />
+        <module name="aem-spa-sccp.it.tests" />
+        <module name="aem-spa-sccp.ui.config" />
+        <module name="aem-spa-sccp.ui.apps" />
+        <module name="aem-spa-sccp.core" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>
