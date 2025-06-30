@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
     jcr:primaryType="cq:Template">
     <jcr:content
         cq:created="{Date}2018-10-22T17:08:28.689+05:30"
         cq:createdBy="admin"
-        jcr:primaryType="cq:PageContent"
+        cq:lastModified="{Date}2025-06-29T20:45:58.245-03:00"
+        cq:lastModifiedBy="admin"
         jcr:description="aem-spa-sccp Page Template"
+        jcr:primaryType="cq:PageContent"
         jcr:title="SPA Page"
         status="enabled"/>
 </jcr:root>

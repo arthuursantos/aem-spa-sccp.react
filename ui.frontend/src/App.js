@@ -1,3 +1,4 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { Page, withModel } from '@adobe/aem-react-editable-components';
 import React from 'react';
 

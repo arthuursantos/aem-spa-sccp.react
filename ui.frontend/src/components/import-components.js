@@ -18,7 +18,8 @@ import withAsyncImport from "../utils/withAsyncImport";
 import './Page/Page';
 import './Container/Container';
 import './ExperienceFragment/ExperienceFragment';
-import './vaicorinthians/vaicorinthians'
+import vaicorinthians from "./vaicorinthians/vaicorinthians";
+import header from "./Header/Header";
 
 import {MapTo} from '@adobe/aem-react-editable-components';
 
@@ -47,7 +48,6 @@ import {
     SeparatorV1,SeparatorV1IsEmptyFn,
     ListV2,ListV2IsEmptyFn
 } from '@adobe/aem-core-components-react-base';
-    import vaicorinthians from "./vaicorinthians/vaicorinthians";
 
 //lazyload / code splitting example of an internal component
 const LazyTextComponent = withAsyncImport(() => import(`./Text/Text`));
@@ -78,11 +78,18 @@ MapTo('aem-spa-sccp/components/carousel')(CarouselV1, {isEmpty: CarouselV1IsEmpt
 MapTo('aem-spa-sccp/components/container')(ContainerV1, {isEmpty: ContainerV1IsEmptyFn});
 
 MapTo('aem-spa-sccp/components/vaicorinthians')(vaicorinthians, {
-    emptyLabel: 'Meu Componente de Texto',
+    emptyLabel: 'VAI CORINTHIANS',
     isEmpty: function () {
         return false;
     }
 });
+
+MapTo('aem-spa-sccp/components/header')(header, {
+    emptyLabel: 'Header',
+    isEmpty: function () {
+        return false;
+    }
+})
 
 //lazy load of internal component (hello world)
 

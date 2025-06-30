@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2025-06-30T14:37:51.441-03:00"
+        cq:lastModifiedBy="admin"
+        cq:tags="[experience-fragments:variation/web]"
+        cq:template="/conf/aem-spa-sccp/settings/wcm/templates/xf-web-variation"
+        cq:xfMasterVariation="{Boolean}true"
+        cq:xfVariantType="web"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="xf-header"
+        sling:resourceType="aem-spa-sccp/components/xfpage">
+        <root
+            jcr:lastModified="{Date}2025-06-30T00:27:49.854-03:00"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="aem-spa-sccp/components/container"
+            layout="simple">
+            <progressbar
+                jcr:created="{Date}2025-06-29T22:56:34.480-03:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2025-06-29T22:56:34.480-03:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="aem-spa-sccp/components/progressbar"/>
+            <helloworld
+                jcr:created="{Date}2025-06-29T23:31:00.704-03:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2025-06-29T23:31:00.704-03:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="aem-spa-sccp/components/helloworld"/>
+            <header
+                jcr:created="{Date}2025-06-30T14:37:51.361-03:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2025-06-30T14:37:51.361-03:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="aem-spa-sccp/components/header"/>
+        </root>
+    </jcr:content>
+</jcr:root>

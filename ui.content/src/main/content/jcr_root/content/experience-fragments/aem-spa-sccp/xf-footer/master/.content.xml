@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2025-06-30T18:06:56.432-03:00"
+        cq:lastModifiedBy="admin"
+        cq:tags="[experience-fragments:variation/web]"
+        cq:template="/conf/aem-spa-sccp/settings/wcm/templates/xf-web-variation"
+        cq:xfMasterVariation="{Boolean}true"
+        cq:xfVariantType="web"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="xf-footer"
+        sling:resourceType="aem-spa-sccp/components/xfpage">
+        <root
+            jcr:lastModified="{Date}2025-06-30T18:06:18.355-03:00"
+            jcr:lastModifiedBy="admin"
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="aem-spa-sccp/components/container"
+            layout="simple">
+            <text
+                jcr:created="{Date}2025-06-30T18:06:50.490-03:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2025-06-30T18:06:56.363-03:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="aem-spa-sccp/components/text"
+                text="&lt;p>Sport Club Corinthians Paulista © 2025 - Todos os direitos reservados&lt;/p>&#xd;&#xa;"
+                textIsRich="true"/>
+        </root>
+    </jcr:content>
+</jcr:root>

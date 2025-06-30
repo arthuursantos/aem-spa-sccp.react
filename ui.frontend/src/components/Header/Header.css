@@ -1,0 +1,52 @@
+.top-bar {
+    background-color: #000; /* Cor de fundo preta */
+    color: #fff; /* Cor do texto/ícones brancos */
+    padding: 5px 0;
+    font-size: 0.85em;
+}
+
+.top-bar .navbar-nav .nav-link {
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+.main-navbar {
+    background-color: #fff; /* Fundo branco para a barra principal */
+    box-shadow: 0 2px 5px rgba(0,0,0,.1); /* Sombra sutil */
+    padding: 10px 0;
+    position: relative; /* Para posicionar o logo centralmente */
+    z-index: 10;
+}
+
+.main-navbar .navbar-brand {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-75%);
+    top: -70px; /* Ajuste para subir o logo sobre as barras */
+    z-index: 20; /* Para garantir que o logo fique por cima */
+}
+
+.main-navbar .navbar-brand img {
+    height: 150px; /* Tamanho do logo principal */
+}
+
+.main-navbar .navbar-nav .nav-link {
+    color: #000; /* Cor do texto preto */
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+}
+
+/* Ajustes de responsividade para alinhar os itens em telas menores */
+@media (max-width: 991.98px) {
+    .top-bar > .container-fluid {
+        justify-content: center;
+    }
+    .main-navbar .navbar-brand {
+        position: static;
+        transform: none;
+        margin: 0 auto 10px auto; /* Centraliza e adiciona margem em telas menores */
+        display: block;
+        text-align: center;
+    }
+}
