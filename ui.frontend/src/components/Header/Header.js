@@ -18,7 +18,7 @@ class Header extends Component {
 
     render() {
         return (
-            <header className="fixed-top">
+            <header className="position-absolute end-0 start-0 top-0">
 
                 <div className="navbar navbar-expand-md top-bar">
                     <div className="container-fluid w-100 d-flex">

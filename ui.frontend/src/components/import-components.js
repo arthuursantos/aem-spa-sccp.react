@@ -20,6 +20,8 @@ import './Container/Container';
 import './ExperienceFragment/ExperienceFragment';
 import vaicorinthians from "./vaicorinthians/vaicorinthians";
 import header from "./Header/Header";
+import partida from './Partida/Partida';
+import carousel from './Carousel/Carousel'
 
 import {MapTo} from '@adobe/aem-react-editable-components';
 
@@ -89,9 +91,23 @@ MapTo('aem-spa-sccp/components/header')(header, {
     isEmpty: function () {
         return false;
     }
+});
+
+MapTo('aem-spa-sccp/components/partida')(partida, {
+    emptyLabel: 'Partida',
+    isEmpty: function () {
+        return false;
+    }
+});
+
+MapTo('aem-spa-sccp/components/carousel')(carousel, {
+    emptyLabel: 'Carousel',
+    isEmpty: function () {
+        return false;
+    }
 })
 
-//lazy load of internal component (hello world)
+    //lazy load of internal component (hello world)
 
 /**
  * Default Edit configuration for the Text component that interact with the Core Text component and sub-types
