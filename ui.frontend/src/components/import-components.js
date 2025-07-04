@@ -21,7 +21,8 @@ import './ExperienceFragment/ExperienceFragment';
 import vaicorinthians from "./vaicorinthians/vaicorinthians";
 import header from "./Header/Header";
 import partida from './Partida/Partida';
-import carousel from './Carousel/Carousel'
+import carousel from './Carousel/Carousel';
+import mediaobject from './MediaObject/MediaObject'
 
 import {MapTo} from '@adobe/aem-react-editable-components';
 
@@ -102,6 +103,13 @@ MapTo('aem-spa-sccp/components/partida')(partida, {
 
 MapTo('aem-spa-sccp/components/carousel')(carousel, {
     emptyLabel: 'Carousel',
+    isEmpty: function () {
+        return false;
+    }
+});
+
+MapTo('aem-spa-sccp/components/mediaobject')(mediaobject, {
+    emptyLabel: 'Media Object',
     isEmpty: function () {
         return false;
     }

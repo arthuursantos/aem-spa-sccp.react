@@ -14,7 +14,7 @@ import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
 public class PlayerImpl implements PlayerModel {
 
     @ValueMapValue
-    private String image;
+    private String imageReference;
     @ValueMapValue
     private String name;
     @ValueMapValue
@@ -28,8 +28,8 @@ public class PlayerImpl implements PlayerModel {
 
 
     @Override
-    public String getImage() {
-        return image;
+    public String getImageReference() {
+        return imageReference;
     }
 
     @Override

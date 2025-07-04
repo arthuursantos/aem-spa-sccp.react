@@ -11,8 +11,9 @@ class App extends Page {
   render() {
     return (
       <div>
-        {this.childComponents}
-        {this.childPages}
+        {/*{this.childComponents}*/}
+        {/*{this.childPages}*/}
+        <Header/>
       </div>
     );
   }

@@ -1,25 +1,8 @@
-.carousel-item {
-    height: 27rem;
-}
-
-img {
+#newsCarousel img {
     object-fit: cover;
     object-position: center;
 }
 
-.carousel-caption {
-    left: 0;
-    width: 100% !important;
-    background-color: #000;
-    text-align: left;
-}
-
-.carousel-indicators {
-    transform: translateY(50%);
-}
-
-.carousel-caption h5 {
-    color: whitesmoke;
-    text-align: left !important;
-    padding-left: 2rem !important;
+#playerCarousel .playerPosition {
+    font-size: .8rem !important;
 }
