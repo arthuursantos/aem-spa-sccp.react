@@ -1,11 +1,12 @@
 import React, {Component} from 'react';
 import { X } from 'lucide-react';
+import "./Partida.css"
 
 class Partida extends Component {
     render() {
         return (
             <div className="d-flex justify-content-center">
-                <div className="w-75 mb-3 d-flex flex-column flex-md-row justify-content-center fs-6 gap-4 text-center">
+                <div className="transform w-75 mb-3 d-flex flex-column flex-md-row justify-content-center fs-6 gap-4 text-center">
                     <div className="text-md-end">
                         <p className="m-0 fw-bold lh-1">PRÓXIMA PARTIDA</p>
                         <p>Campeonato Brasileiro 2025</p>

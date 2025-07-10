@@ -17,6 +17,8 @@ public class NewsImpl implements NewsModel {
     private String title;
     @ValueMapValue
     private String fileReference;
+    @ValueMapValue
+    private String fragmentPath;
 
     @Override
     public String getTitle() {
@@ -28,4 +30,6 @@ public class NewsImpl implements NewsModel {
         return fileReference;
     }
 
+    @Override
+    public String getFragmentPath() {return fragmentPath;}
 }

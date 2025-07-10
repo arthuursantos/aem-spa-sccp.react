@@ -22,7 +22,7 @@ class Header extends Component {
 
                 <div className="navbar navbar-expand-md top-bar">
                     <div className="container-fluid w-100 d-flex">
-                        <a className="m-2 d-flex flex-column nav-link" href="#">
+                        <a className="m-2 d-flex flex-column nav-link" href="https://www.corinthians.com.br/search#gsc.tab=0">
                             <i className="mx-2"><Search/></i> BUSCAR
                         </a>
                     </div>

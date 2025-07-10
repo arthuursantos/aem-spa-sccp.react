@@ -51,6 +51,7 @@ import {
     SeparatorV1,SeparatorV1IsEmptyFn,
     ListV2,ListV2IsEmptyFn
 } from '@adobe/aem-core-components-react-base';
+    import news from "./News/news";
 
 //lazyload / code splitting example of an internal component
 const LazyTextComponent = withAsyncImport(() => import(`./Text/Text`));
@@ -102,14 +103,21 @@ MapTo('aem-spa-sccp/components/partida')(partida, {
 });
 
 MapTo('aem-spa-sccp/components/carousel')(carousel, {
-    emptyLabel: 'Carousel',
+    emptyLabel: 'Carrossel',
     isEmpty: function () {
         return false;
     }
 });
 
 MapTo('aem-spa-sccp/components/mediaobject')(mediaobject, {
-    emptyLabel: 'Media Object',
+    emptyLabel: 'Mídia',
+    isEmpty: function () {
+        return false;
+    }
+});
+
+MapTo('aem-spa-sccp/components/news')(news, {
+    emptyLabel: 'Notícia',
     isEmpty: function () {
         return false;
     }

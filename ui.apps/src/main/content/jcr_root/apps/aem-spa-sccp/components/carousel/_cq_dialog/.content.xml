@@ -1,155 +1,165 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
-          jcr:primaryType="nt:unstructured"
-          jcr:title="Conteúdo do carrossel"
-          sling:resourceType="cq/gui/components/authoring/dialog">
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Conteúdo do carrossel"
+    sling:resourceType="cq/gui/components/authoring/dialog">
     <content
-            jcr:primaryType="nt:unstructured"
-            sling:resourceType="granite/ui/components/foundation/container">
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/foundation/container">
         <items jcr:primaryType="nt:unstructured">
             <column
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="granite/ui/components/foundation/container">
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/foundation/container">
                 <items jcr:primaryType="nt:unstructured">
                     <list
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="granite/ui/components/foundation/form/select"
-                            class="cq-dialog-dropdown-showhide"
-                            cq-dialog-dropdown-showhide-target=".carousel-options-showhide-target"
-                            fieldLabel="Tipo de conteúdo"
-                            name="./contentType">
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/form/select"
+                        class="cq-dialog-dropdown-showhide"
+                        cq-dialog-dropdown-showhide-target=".carousel-options-showhide-target"
+                        fieldLabel="Tipo de conteúdo"
+                        name="./contentType">
                         <items jcr:primaryType="nt:unstructured">
                             <option1
-                                    jcr:primaryType="nt:unstructured"
-                                    text="Notícia"
-                                    value="news"/>
+                                jcr:primaryType="nt:unstructured"
+                                text="Notícia"
+                                value="news"/>
                             <option2
-                                    jcr:primaryType="nt:unstructured"
-                                    text="Atleta"
-                                    value="player"/>
+                                jcr:primaryType="nt:unstructured"
+                                text="Atleta"
+                                value="player"/>
                         </items>
                     </list>
                     <news
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="granite/ui/components/foundation/container"
-                            class="hide carousel-options-showhide-target foundation-layout-util-vmargin"
-                            showhidetargetvalue="news">
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/container"
+                        class="hide carousel-options-showhide-target foundation-layout-util-vmargin"
+                        showhidetargetvalue="news">
                         <items jcr:primaryType="nt:unstructured">
                             <heading
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="granite/ui/components/foundation/heading"
-                                    class="coral-Heading coral-Heading--4"
-                                    level="{Long}4"
-                                    text="Propriedades da notícia"/>
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/heading"
+                                class="coral-Heading coral-Heading--4"
+                                level="{Long}4"
+                                text="Propriedades da notícia"/>
                             <newsFields
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
-                                    composite="{Boolean}true">
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                composite="{Boolean}true">
                                 <field
-                                        jcr:primaryType="nt:unstructured"
-                                        sling:resourceType="granite/ui/components/coral/foundation/container"
-                                        name="./newsAssets">
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                    name="./newsAssets">
                                     <items jcr:primaryType="nt:unstructured">
                                         <title
-                                                jcr:primaryType="nt:unstructured"
-                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-                                                fieldDescription="Obrigatório informar o título da notícia."
-                                                emptyText="Insira o título da notícia."
-                                                fieldLabel="Título"
-                                                name="./title"/>
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            emptyText="Insira o título da notícia."
+                                            fieldDescription="Obrigatório informar o título da notícia."
+                                            fieldLabel="Título"
+                                            name="./title"/>
                                         <fileReference
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                                            allowUpload="{Boolean}false"
+                                            autoStart="{Boolean}false"
+                                            class="cq-droptarget"
+                                            fieldDescription="Obrigatório inserir uma imagem para a notícia."
+                                            fieldLabel="Imagem para a ilustrar a notícia"
+                                            fileNameParameter="./fileName"
+                                            fileReferenceParameter="./fileReference"
+                                            mimeTypes="[image/gif,image/jpeg,image/png,image/tiff,image/svg+xml]"
+                                            multiple="{Boolean}false"
+                                            name="./image"
+                                            uploadUrl="${suffix.path}"
+                                            useHTML5="{Boolean}true"/>
+                                        <fragmentPath
                                                 jcr:primaryType="nt:unstructured"
-                                                sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
-                                                allowUpload="{Boolean}false"
-                                                autoStart="{Boolean}false"
-                                                class="cq-droptarget"
-                                                fieldLabel="Imagem para a ilustrar a notícia"
-                                                fieldDescription="Obrigatório inserir uma imagem para a notícia."
-                                                fileNameParameter="./fileName"
-                                                fileReferenceParameter="./fileReference"
-                                                mimeTypes="[image/gif,image/jpeg,image/png,image/tiff,image/svg+xml]"
-                                                multiple="{Boolean}false"
-                                                name="./image"
-                                                uploadUrl="${suffix.path}"
-                                                useHTML5="{Boolean}true"/>
+                                                sling:resourceType="dam/cfm/components/cfpicker"
+                                                name="./fragmentPath"
+                                                fieldDescription="Caminho para a notícia que o usuário será redirecionado."
+                                                fieldLabel="Notícia"
+                                                emptyText="Selecione uma notícia."
+                                                pickerTitle="Select Content Fragment"
+                                                rootPath="/content/dam/aem-spa-sccp/contentfragments/news"
+                                                required="{Boolean}true"/>
                                     </items>
                                 </field>
                             </newsFields>
                         </items>
                     </news>
                     <player
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="granite/ui/components/foundation/container"
-                            class="hide carousel-options-showhide-target foundation-layout-util-vmargin"
-                            showhidetargetvalue="player">
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/container"
+                        class="hide carousel-options-showhide-target foundation-layout-util-vmargin"
+                        showhidetargetvalue="player">
                         <items jcr:primaryType="nt:unstructured">
                             <heading
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="granite/ui/components/foundation/heading"
-                                    class="coral-Heading coral-Heading--4"
-                                    level="{Long}4"
-                                    text="Propriedades do atleta"/>
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/heading"
+                                class="coral-Heading coral-Heading--4"
+                                level="{Long}4"
+                                text="Propriedades do atleta"/>
                             <playerFields
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
-                                    composite="{Boolean}true">
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                composite="{Boolean}true">
                                 <field
-                                        jcr:primaryType="nt:unstructured"
-                                        sling:resourceType="granite/ui/components/coral/foundation/container"
-                                        name="./playerAssets">
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                    name="./playerAssets">
                                     <items jcr:primaryType="nt:unstructured">
-                                                <image
-                                                        jcr:primaryType="nt:unstructured"
-                                                        sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
-                                                        allowUpload="{Boolean}false"
-                                                        autoStart="{Boolean}false"
-                                                        class="cq-droptarget"
-                                                        fieldLabel="Foto"
-                                                        fieldDescription="Obrigatório inserir uma foto do atleta."
-                                                        fileNameParameter="./fileName"
-                                                        fileReferenceParameter="./imageReference"
-                                                        mimeTypes="[image/gif,image/jpeg,image/png,image/tiff,image/svg+xml]"
-                                                        multiple="{Boolean}false"
-                                                        name="./image"
-                                                        title="Foto do atleta"
-                                                        uploadUrl="${suffix.path}"
-                                                        useHTML5="{Boolean}true"/>
-                                                <name
-                                                        jcr:primaryType="nt:unstructured"
-                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-                                                        fieldDescription="Obrigatório informar o nome do atleta."
-                                                        emptyText="Insira o nome do atleta (e.g Yuri Alberto)"
-                                                        fieldLabel="Nome"
-                                                        name="./name"/>
-                                                <position
-                                                        jcr:primaryType="nt:unstructured"
-                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-                                                        fieldDescription="Obrigatório informar a posição do atleta."
-                                                        emptyText="Insira a posição do atleta (e.g Ponta-esquerda)"
-                                                        fieldLabel="Posição"
-                                                        name="./position"/>
-                                                <placeOfBirth
-                                                        jcr:primaryType="nt:unstructured"
-                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-                                                        fieldDescription="Obrigatório informar a cidade natal do atleta."
-                                                        emptyText="Insira a cidade natal do atleta (e.g Indaiatuba, SP - Brasil)"
-                                                        fieldLabel="Cidade natal"
-                                                        name="./placeOfBirth"/>
-                                                <age
-                                                        jcr:primaryType="nt:unstructured"
-                                                        sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
-                                                        fieldDescription="Obrigatório informar a idade do atleta."
-                                                        emptyText="Insira a idade do atleta."
-                                                        fieldLabel="Idade"
-                                                        name="./age"/>
-                                                <height
-                                                        jcr:primaryType="nt:unstructured"
-                                                        sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
-                                                        fieldDescription="Obrigatório informar a altura do atleta."
-                                                        emptyText="Insira a altura do atleta."
-                                                        fieldLabel="Altura"
-                                                        name="./height"
-                                                        step="any"/>
+                                        <image
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                                            allowUpload="{Boolean}false"
+                                            autoStart="{Boolean}false"
+                                            class="cq-droptarget"
+                                            fieldDescription="Obrigatório inserir uma foto do atleta."
+                                            fieldLabel="Foto"
+                                            fileNameParameter="./fileName"
+                                            fileReferenceParameter="./imageReference"
+                                            mimeTypes="[image/gif,image/jpeg,image/png,image/tiff,image/svg+xml]"
+                                            multiple="{Boolean}false"
+                                            name="./image"
+                                            title="Foto do atleta"
+                                            uploadUrl="${suffix.path}"
+                                            useHTML5="{Boolean}true"/>
+                                        <name
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            emptyText="Insira o nome do atleta (e.g Yuri Alberto)"
+                                            fieldDescription="Obrigatório informar o nome do atleta."
+                                            fieldLabel="Nome"
+                                            name="./name"/>
+                                        <position
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            emptyText="Insira a posição do atleta (e.g Ponta-esquerda)"
+                                            fieldDescription="Obrigatório informar a posição do atleta."
+                                            fieldLabel="Posição"
+                                            name="./position"/>
+                                        <placeOfBirth
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            emptyText="Insira a cidade natal do atleta (e.g Indaiatuba, SP - Brasil)"
+                                            fieldDescription="Obrigatório informar a cidade natal do atleta."
+                                            fieldLabel="Cidade natal"
+                                            name="./placeOfBirth"/>
+                                        <age
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
+                                            emptyText="Insira a idade do atleta."
+                                            fieldDescription="Obrigatório informar a idade do atleta."
+                                            fieldLabel="Idade"
+                                            name="./age"/>
+                                        <height
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
+                                            emptyText="Insira a altura do atleta."
+                                            fieldDescription="Obrigatório informar a altura do atleta."
+                                            fieldLabel="Altura"
+                                            name="./height"
+                                            step="any"/>
                                     </items>
                                 </field>
                             </playerFields>
