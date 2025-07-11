@@ -31,7 +31,7 @@ class Header extends Component {
                 <nav className="navbar navbar-expand-lg main-navbar">
                     <div className="container-fluid">
 
-                        <a className="navbar-brand" href="#">
+                        <a className="navbar-brand" href="http://localhost:4502/content/aem-spa-sccp/home.html?wcmmode=disabled">
                             <img src="/content/dam/aem-spa-sccp/assets/img/sccp-escudo.png" alt="VAI CORINTHIANS"/>
                         </a>
 
@@ -58,7 +58,7 @@ class Header extends Component {
                                     <a className="nav-link" href="https://www.corinthians.com.br/clube/modalidades/competitivas/asa-delta">MODALIDADES</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="https://www.corinthians.com.br/noticias">NOTÍCIAS</a>
+                                    <a className="nav-link" href="http://localhost:4502/content/aem-spa-sccp/noticias.html?wcmmode=disabled">NOTÍCIAS</a>
                                 </li>
                                 <li className="nav-item">
                                     <a className="nav-link" href="https://agencia.corinthians.com.br/">IMPRENSA</a>
